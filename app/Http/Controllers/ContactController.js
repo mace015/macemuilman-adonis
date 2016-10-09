@@ -19,7 +19,7 @@ class ContactController {
 			message.subject('Contact formulier ingevuld op macemuilman.nl');
 		});
 
-		request.with({ gelukt: 'true' }).flash();
+		yield request.with({ gelukt: 'true' }).flash();
 
 		return response.route('contact');
 

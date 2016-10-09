@@ -33,11 +33,11 @@
 			</div>
 		</div>
 	{% endif %}
-	{% if errors.length > 0 %}
+	{% if old('errors').length > 0 %}
 		<div class="vozx_container">
 			<div class="vozx_column_dd_span12">
 				<div class="vozx_alert_error">
-					{% for error in errors %}
+					{% for error in old('errors') %}
 						<i class="icon-times"></i> <strong>Oops!</strong> {{ error }} <br />
 					{% endfor %}
 					<a class="vozx_alert_box_close" title="Close">✕</a>
